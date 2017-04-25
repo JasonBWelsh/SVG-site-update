@@ -26,6 +26,7 @@ a {
   text-decoration: none;
   color: #39add1;
   font-weight: 700;
+  transition: color .4s;
   }
   a:hover {
     color: #111;
@@ -38,6 +39,8 @@ header {
     padding-bottom: 50px;
     text-align: left;
   }
+
+
   header nav ul li {
     display: inline-block;
     margin-right: 20px;
@@ -47,10 +50,45 @@ header {
     height: 13px;
   }
 
+/* menu icons */
+  .heart-icon,
+  .location-icon,
+  .contact-icon {
+    height: 15px;
+    overflow: visible;
+  }
+
+
+ 
+  li a .st0 {
+    fill: #39ADD1;
+    transition: fill .4s, transform .4s ease-out;
+    transform-origin: 50% 50%;
+  }
+
+   li a:hover .st0 {
+    fill: #BA8058;
+    transform: rotate(-15deg) scale(1.1);
+  }
+
+
+/* logo */
   .logo {
     height: 140px;
     width: 120px;
     margin: 0 auto;
+  }
+
+  .logo-st0 {
+    fill: #BA8058;
+  }
+
+   .logo-st1 {
+    fill: #EAAA7F;
+  }
+
+   .logo-st2 {
+    fill: #F4C6A6;
   }
 
   .logo-text {  /* removes svg text on mobile */
@@ -95,6 +133,22 @@ main {
   height: 170px;
   width: 170px;
 }
+
+.doggy {
+  transition: transform .3s;
+}
+
+.doggy:hover {
+  transform: rotate(-45deg);
+}
+
+.doggy .eye {
+  transition: fill .5s;
+}
+.doggy:hover .eye {
+  fill: #a02018;
+}
+
 
 /* red corgi */
 .red-st0 {
@@ -172,11 +226,3 @@ footer {
 
 }
 
-
-
-
-.test {
-  fill: green;
-  stroke-width: 20;
-  stroke: tomato;
-}
